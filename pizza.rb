@@ -1,4 +1,11 @@
 class Pizza
+  attr_accessor :toppings
+
+  def initialize(toppingsArray)
+    @toppings = toppingsArray
+  end
+
+
 end
 
 class Topping
