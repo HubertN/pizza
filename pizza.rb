@@ -1,7 +1,7 @@
 class Pizza
   attr_accessor :toppings
 
-  def initialize(toppingsArray)
+  def initialize( toppingsArray = [ Topping.new("cheese") ] )
     @toppings = toppingsArray
   end
 

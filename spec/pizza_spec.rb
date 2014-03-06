@@ -1,3 +1,4 @@
+require 'pry-debugger'
 require './pizza'
 
 describe Pizza do
@@ -5,9 +6,16 @@ describe Pizza do
     it "describes all of the toppings" do
       toppings = [Topping.new("mushrooms", vegetarian: true),
         Topping.new("pepperoni")
-    ]
+      ]
       pizza = Pizza.new(toppings)
       expect(pizza.toppings).to eq(toppings)
+    end
+
+    it "defaults the toppings to cheese only, if the pizza has no toppings" do
+      pizza = Pizza.new
+      # binding.pry
+      expect(pizza.toppings.size). to eq(1)
+      expect(pizza.toppings.first.name).to eq('cheese')
     end
   end
   it "exists" do
