@@ -12,6 +12,9 @@ describe Topping do
       topping = Topping.new("olives")
       expect(topping.name). to eq("olives")
     end
+    it "sets wheather or not the topping is vegetarian" do
+      topping = Topping.new "bell peppers", vegetarian: true
+    end
   end
     it "exists" do
       expect(Topping).to be_a(Class)
